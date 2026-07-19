@@ -32,10 +32,10 @@ php -S 127.0.0.1:8000 -t html html/router.php
 ```
 
 If you visit http://127.0.0.1:8000/ in a web browser, you should see this:
-*screenshot*
+![debug page](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/01-debug_page.png?raw=true)
 
 If you try visiting http://127.0.0.1:8000/static/css/theme.css or any other resource in `/static/` you will see that the page changes to a 404 page:
-*screenshot*
+![static files path](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/02-static_files_path.png?raw=true)
 
 Visiting any resource not in `/static/` will yield a page with our debug info. Now that we know this part of our router works, let's create a view for our homepage. To simplify things we will first create a page header and page footer which we can use for all of our views. Create a `html/inc/` folder. Then create `html/inc/page-header.php` with the following content:
 ```php
@@ -106,7 +106,7 @@ require_once(__DIR__ . '/views/404.php');
 To route each request to the correct view, we will create an array which maps each static path to the path of its corresponding view. We can use the `isset` function to check if our static paths array contains the requested path. If it does, we can simply insert the contents of the view and exit. Otherwise, we will insert the contents of our 404 view.
 
 If we visit http://127.0.0.1:8000/ now, we will see this:
-*screenshot*
+![home view](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/03-home_view.png?raw=true)
 
 And if we visit a URL which doesn't exist such as http://127.0.0.1:8000/accounts/login/, we will see this:
-*screenshot*
+![404 view](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/04-404_view.png?raw=true)
