@@ -110,3 +110,36 @@ If we visit http://127.0.0.1:8000/ now, we will see this:
 
 And if we visit a URL which doesn't exist such as http://127.0.0.1:8000/accounts/login/, we will see this:
 ![404 view](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/04-404_view.png?raw=true)
+
+Next we need to install Bootstrap. Create a `html/static/css/` folder and a `html/static/js/` folder. Then download Bootstrap from https://getbootstrap.com/docs/5.3/getting-started/download/. Afterwards, extract the zip file. Then copy `bootstrap.min.css` to `html/static/css/` and copy `bootstrap.bundle.min.js` to `html/static/js/`. Your project structure should look like this now:
+```
+php-simple-todo/
+    inc/
+        page-footer.php
+        page-header.php
+    static/
+        css/
+            bootstrap.min.css
+        js/
+            bootstrap.bundle.min.js
+    views/
+        404.php
+        home.php
+    router.php
+```
+
+And lastly, we need to modify `html/inc/page-header.php` like this:
+```php
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Simple Todo - <?php echo $viewName; ?></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+        <script src="/static/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+```
+
+If you visit http://127.0.0.1:8000/ now you should see a slight difference in the appearance of the homepage:
+*screenshot*

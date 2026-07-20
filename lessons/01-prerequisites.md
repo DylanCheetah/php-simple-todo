@@ -1,6 +1,6 @@
 # Lesson 01: Prerequisites
 
-In this tutorial series we will be developing a simple todo list website using PHP, SQL, HTML, CSS, and HTMX. Before we begin, we will need to install the software we will need:
+In this tutorial series we will be developing a simple todo list website using PHP, SQL, HTML, CSS, Bootstrap, and HTMX. Before we begin, we will need to install the software we will need:
 01. install Visual Studio Code from https://code.visualstudio.com/download
 02. start Visual Studio Code
 03. click the Extensions tab
