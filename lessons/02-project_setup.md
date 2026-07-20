@@ -128,7 +128,7 @@ php-simple-todo/
     router.php
 ```
 
-Now we need to modify `html/inc/page-header.php` like this:
+Afterwards we need to modify `html/inc/page-header.php` like this:
 ```php
 <!DOCTYPE html>
 <html lang="en">
