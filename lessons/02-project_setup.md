@@ -128,7 +128,7 @@ php-simple-todo/
     router.php
 ```
 
-And lastly, we need to modify `html/inc/page-header.php` like this:
+Now we need to modify `html/inc/page-header.php` like this:
 ```php
 <!DOCTYPE html>
 <html lang="en">
@@ -139,6 +139,14 @@ And lastly, we need to modify `html/inc/page-header.php` like this:
         <script src="/static/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="container-fluid">
+```
+
+And we also need to modify `html/inc/page-footer.php` like this:
+```php
+        </div>
+    </body>
+</html>
 ```
 
 If you visit http://127.0.0.1:8000/ now you should see a slight difference in the appearance of the homepage:
