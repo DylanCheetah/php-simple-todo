@@ -136,7 +136,7 @@ Afterwards we need to modify `html/inc/page-header.php` like this:
         <title>Simple Todo - <?php echo $viewName; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <div class="container-fluid">
