@@ -142,4 +142,4 @@ And lastly, we need to modify `html/inc/page-header.php` like this:
 ```
 
 If you visit http://127.0.0.1:8000/ now you should see a slight difference in the appearance of the homepage:
-*screenshot*
+![bootstrap](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/05-bootstrap.png?raw=true)
