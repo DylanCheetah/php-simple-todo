@@ -64,7 +64,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
 <?php require_once(__DIR__ . '/../inc/page-footer.php'); ?>
 ```
 
-In our home view we start by setting `$viewName` to the name of our view. Then we use the `require_once` function to insert the contents of our page header template. Notice that our page header template uses `$viewName` to build part of the page title. Afterwards we place the main content of our view. And then we use the `require_once` function to insert the contents of our page footer template. We will also need a view for when the requested resource isn't found. Create `html/views/404.php` with the following content:
+In our home view we start by setting `$viewName` to the name of our view. Then we use the `require_once` function to insert the contents of our page header template. Notice that our page header template uses `$viewName` to build part of the page title. Afterwards we place the main content of our view. And then we use the `require_once` function to insert the contents of our page footer template. Notice that when using `require_once` we give a path relative to the directory the current script is in. We will also need a view for when the requested resource isn't found. Create `html/views/404.php` with the following content:
 ```php
 <?php
 $viewName = 'Not Found';
