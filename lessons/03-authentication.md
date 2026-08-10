@@ -228,11 +228,11 @@ require_once(__DIR__ . '/views/404.php');
 ```
 
 If you visit https://127.0.0.1:8000/accounts/sign-up/ at this point, you should see this:
-*screenshot*
+![sign-up page](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/06-sign_up_page.png?raw=true)
 
 If you enter a valid username, password, and confirm password you should be redirected to the hompage. If any of the fields are invalid you will see an error message instead:
-*screenshot*
-*screenshot*
+![invalid username](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/07-invalid_username.png?raw=true)
+![invalid password](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/08-invalid_password.png?raw=true)
 
 Next we need to create a sign-in page. Open `html/inc/user.php` and modify it like this:
 ```php
@@ -404,7 +404,7 @@ require_once(__DIR__ . '/views/404.php');
 ```
 
 The `session_start` function is called to start a new session. We will need to use a session to store data associated with the current user's session when they sign in. If you visit http://127.0.0.1:8000/accounts/sign-in/ at this point, you should see this:
-*screenshot*
+![sign-in page](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/09-sign_in_page.png?raw=true)
 
 If any of the data is invalid when you submit the form, you will see any error messages as alerts above the form.
 
@@ -540,7 +540,7 @@ require_once(__DIR__ . '/views/404.php');
 ```
 
 If you visit http://127.0.0.1:8000/accounts/sign-out/ at this point, you should see the following:
-*screenshot*
+![sign-out page](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/10-sign_out_page.png?raw=true)
 
 Lastly, we need to create a page for deleting a user account. Open `html/inc/user.php` and modify it like this:
 ```php
@@ -689,6 +689,6 @@ require_once(__DIR__ . '/views/404.php');
 ```
 
 If you visit http://127.0.0.1:8000/accounts/delete/ at this point, you should see this page:
-*screenshot*
+![delete account page](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/11-delete_account_page.png?raw=true)
 
 You should now have a minimal working user account system. However, we need to fix a few security flaws in the next lesson.
