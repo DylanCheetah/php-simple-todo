@@ -8,9 +8,16 @@ if(preg_match('#^/static/#', $path)) {
     return false;
 }
 
+// Start a new session
+session_start();
+
 // Is the requested resource at a static path?
 $staticPaths = array(
-    '/' => __DIR__ . '/views/home.php'
+    '/'                   => __DIR__ . '/views/home.php',
+    '/accounts/sign-up/'  => __DIR__ . '/views/sign-up.php',
+    '/accounts/sign-in/'  => __DIR__ . '/views/sign-in.php',
+    '/accounts/sign-out/' => __DIR__ . '/views/sign-out.php',
+    '/accounts/delete/'   => __DIR__ . '/views/delete-account.php'
 );
 
 if(isset($staticPaths[$path])) {
