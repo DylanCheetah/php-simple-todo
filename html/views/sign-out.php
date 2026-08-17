@@ -2,6 +2,13 @@
 // Load user functions
 require_once(__DIR__ . '/../inc/user.php');
 
+// Is the user signed in?
+if(!isSignedIn()) {
+    // Redirect to sign-in page
+    header('Location: /accounts/sign-in/?redirect_to=/accounts/sign-out/');
+    exit();
+}
+
 // Is the request a POST request?
 if($method === 'POST') {
     // Sign out the user and redirect to the homepage
@@ -20,6 +27,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
             <h1>Sign-Out</h1>
             <hr/>
             <form method="POST">
+                <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                 <div class="row">
                     <p class="col">Are you sure you want to sign out?</p>
                 </div>

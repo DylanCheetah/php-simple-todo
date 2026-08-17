@@ -27,8 +27,14 @@ if($method === 'POST') {
     if(!count($errors)) {
         // Sign the user in
         if(signIn($username, $password)) {
-            // Redirect to homepage
-            header('Location: /');
+            // Redirect
+            $redirectUrl = '/';
+
+            if(isset($_GET['redirect_to'])) {
+                $redirectUrl = $_GET['redirect_to'];
+            }
+
+            header('Location: ' . $redirectUrl);
             exit();
         }
 
@@ -58,6 +64,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
             }
             ?>
             <form method="POST">
+                <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                 <div class="row m-1">
                     <label class="col-3" for="username">Username:</label>
                     <div class="col-9"><input class="form-control" id="username" name="username" 

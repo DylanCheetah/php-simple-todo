@@ -68,4 +68,9 @@ function deleteUser(int $userId): void {
     // Sign out
     signOut();
 }
+
+
+function isSignedIn(): bool {
+    return isset($_SESSION['userId']);
+}
 ?>

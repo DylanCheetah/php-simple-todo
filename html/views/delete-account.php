@@ -2,6 +2,13 @@
 // Load user functions
 require_once(__DIR__ . '/../inc/user.php');
 
+// Is the user signed in?
+if(!isSignedIn()) {
+    // Redirect to the sign-in page
+    header('Location: /accounts/sign-in/?redirect_to=/accounts/delete/');
+    exit();
+}
+
 // Is the request is a POST request?
 if($method === 'POST') {
     // Delete the current user and redirect to the homepage
@@ -20,6 +27,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
             <h1>Delete Account</h1>
             <hr/>
             <form method="POST">
+                <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                 <div class="row">
                     <p class="col">Are you sure you want to permanently delete your account?</p>
                 </div>

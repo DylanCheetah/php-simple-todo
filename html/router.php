@@ -11,6 +11,14 @@ if(preg_match('#^/static/#', $path)) {
 // Start a new session
 session_start();
 
+// Apply CSRF protection to POST requests
+require_once(__DIR__ . '/inc/csrf.php');
+
+if($method === 'POST' && !verifyCsrfToken()) {
+    require_once(__DIR__ . '/views/400.php');
+    exit();
+}
+
 // Is the requested resource at a static path?
 $staticPaths = array(
     '/'                   => __DIR__ . '/views/home.php',
