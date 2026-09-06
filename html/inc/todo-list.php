@@ -49,8 +49,8 @@ function getTodoLists(): array {
     // Generate URL for previous and next page
     $prevOffset = $offset - 10;
     $nextOffset = $offset + 10;
-    $prevUrl = $hasPrevPage ? "/?start={$prevOffset}" : null;
-    $nextUrl = $hasNextPage ? "/?start={$nextOffset}" : null;
+    $prevUrl = $hasPrevPage ? "/?start=$prevOffset" : null;
+    $nextUrl = $hasNextPage ? "/?start=$nextOffset" : null;
 
     // Return todo list page
     return array(
@@ -58,6 +58,23 @@ function getTodoLists(): array {
         'nextUrl'   => $nextUrl,
         'todoLists' => $todoLists
     );
+}
+
+
+function updateTodoList(int $id, string $name): bool {
+    global $db;
+
+    // Update the todo list
+    try {
+        $stmt = $db->prepare('UPDATE todo_lists SET `name` = ? WHERE `id` = ?;');
+        $db->beginTransaction();
+        $stmt->execute(array($name, $id));
+        $db->commit();
+    } catch(PDOException $e) {
+        return false;
+    }
+
+    return true;
 }
 
 

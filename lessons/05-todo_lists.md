@@ -228,8 +228,8 @@ function getTodoLists(): array {
     // Generate URL for previous and next page
     $prevOffset = $offset - 10;
     $nextOffset = $offset + 10;
-    $prevUrl = $hasPrevPage ? "/?start={$prevOffset}" : null;
-    $nextUrl = $hasNextPage ? "/?start={$nextOffset}" : null;
+    $prevUrl = $hasPrevPage ? "/?start=$prevOffset" : null;
+    $nextUrl = $hasNextPage ? "/?start=$nextOffset" : null;
 
     // Return todo list page
     return array(
@@ -419,8 +419,8 @@ function getTodoLists(): array {
     // Generate URL for previous and next page
     $prevOffset = $offset - 10;
     $nextOffset = $offset + 10;
-    $prevUrl = $hasPrevPage ? "/?start={$prevOffset}" : null;
-    $nextUrl = $hasNextPage ? "/?start={$nextOffset}" : null;
+    $prevUrl = $hasPrevPage ? "/?start=$prevOffset" : null;
+    $nextUrl = $hasNextPage ? "/?start=$nextOffset" : null;
 
     // Return todo list page
     return array(
