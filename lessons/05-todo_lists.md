@@ -173,7 +173,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
 ```
 
 If we visit http://127.0.0.1:8000/ at this point, we will see this:
-*screenshot*
+![todo list create form](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/12-todo_list_create_form.png?raw=true)
 
 Now we need to create a paginated view for our todo lists. Modify `html/inc/todo-list.php` like this:
 ```php
@@ -364,7 +364,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
 ```
 
 By checking if the `HX-Request` HTTP header exists we can determine if the request was an AJAX request triggered by HTMX. This will allow us to have a single endpoint which sends either the full homepage or just the todo lists view. If you visit http://127.0.0.1:8000/ at this point you should see something like this. The actual todo lists will vary based on what you created:
-*screenshot*
+![todo lists view](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/13-todo_lists_view.png?raw=true)
 
 Lastly, we need to make it so we can delete existing todo lists. Open `html/inc/todo-list.php` and modify it like this:
 ```php
