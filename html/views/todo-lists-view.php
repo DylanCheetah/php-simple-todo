@@ -45,13 +45,13 @@
         // Is there a previous URL?
         if($page['prevUrl'] === null) {
             ?>
-            <a class="col-2 m-1 btn btn-secondary">Previous</a>
+            <button class="col-2 m-1 btn btn-secondary">Previous</button>
             <?php
         } else {
             ?>
-            <a class="col-2 m-1 btn btn-primary" hx-get="<?php echo $page['prevUrl']; ?>" 
+            <button class="col-2 m-1 btn btn-primary" hx-get="<?php echo $page['prevUrl']; ?>" 
                 hx-swap="outerHTML" hx-target="#todoListsView" 
-                hx-push-url="<?php echo $page['prevUrl']; ?>">Previous</a>
+                hx-push-url="<?php echo $page['prevUrl']; ?>">Previous</button>
             <?php
         }
         ?>
@@ -59,13 +59,13 @@
         // Is there a next URL?
         if($page['nextUrl'] === null) {
             ?>
-            <a class="col-2 m-1 btn btn-secondary">Next</a>
+            <button class="col-2 m-1 btn btn-secondary">Next</button>
             <?php
         } else {
             ?>
-            <a class="col-2 m-1 btn btn-primary" hx-get="<?php echo $page['nextUrl']; ?>"
+            <button class="col-2 m-1 btn btn-primary" hx-get="<?php echo $page['nextUrl']; ?>"
                 hx-swap="outerHTML" hx-target="#todoListsView"
-                hx-push-url="<?php echo $page['nextUrl']; ?>">Next</a>
+                hx-push-url="<?php echo $page['nextUrl']; ?>">Next</button>
             <?php
         }
         ?>
