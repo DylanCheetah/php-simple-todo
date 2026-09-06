@@ -7,7 +7,7 @@
     $page = getTodoLists();
 
     // Are there any todo lists to show?
-    if(!empty($page['todoLists'])) {
+    if(count($page['todoLists'])) {
         // Show all todo lists on the page
         foreach($page['todoLists'] as $todoList) {
             ?>
