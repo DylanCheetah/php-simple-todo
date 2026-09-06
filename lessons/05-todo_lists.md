@@ -505,7 +505,7 @@ if(preg_match('#^/([^/]+)/([0-9]+)(?:/([^/]+))?/#', $path, $matches)) {
     // Extract the object type, id, and action before passing them to the matching view
     $objectType = $matches[1];
     $objectId = $matches[2];
-    $objectAction = isset($matches[3]) ? $matches[3] : null;
+    $objectAction = isset($matches[3]) ? $matches[3] : '';
 
     // Check if a view exists for the given object type and action pair
     if(isset($dynamicPaths[$objectType][$objectAction])) {
