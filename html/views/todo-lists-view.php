@@ -14,7 +14,7 @@
             <div class="row m-1">
                 <div class="col card bg-white">
                     <div class="card-body row">
-                        <a class="col-9 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>">
+                        <a class="col-9 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>/">
                             <?php echo $todoList['name']; ?></a>
                         <form class="col-3" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
                             hx-indicator="#todoListDeleteBtn<?php $todoList['id']; ?>">
