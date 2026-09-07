@@ -435,9 +435,9 @@ function deleteTodoList(int $id): void {
     global $db;
 
     // Delete the todo list
-    $stmt = $db->prepare('DELETE FROM todo_lists WHERE user = ? AND id = ?;');
+    $stmt = $db->prepare('DELETE FROM todo_lists WHERE `id` = ? AND `user` = ?;');
     $db->beginTransaction();
-    $stmt->execute(array($_SESSION['userId'], $id));
+    $stmt->execute(array($id, $_SESSION['userId']));
     $db->commit();
 }
 ?>
