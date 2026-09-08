@@ -261,10 +261,10 @@ Notice that we limit the number of todo lists returned to 11 and use a query par
                     <div class="card-body row">
                         <a class="col-9 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>/">
                             <?php echo $todoList['name']; ?></a>
-                        <form class="col-3" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
+                        <form class="col-3 row" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
                             hx-indicator="#todoListDeleteBtn<?php $todoList['id']; ?>">
                             <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
-                            <button class="btn btn-danger">
+                            <button class="col btn btn-danger">
                                 <span class="spinner-border spinner-border-sm htmx-indicator"
                                     id="todoListDeleteBtn<?php $todoList['id']; ?>">
                                     <span class="visually-hidden">Loading...</span>
