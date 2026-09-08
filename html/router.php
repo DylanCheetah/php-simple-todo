@@ -26,7 +26,8 @@ $staticPaths = array(
     '/accounts/sign-in/'  => __DIR__ . '/views/sign-in.php',
     '/accounts/sign-out/' => __DIR__ . '/views/sign-out.php',
     '/accounts/delete/'   => __DIR__ . '/views/delete-account.php',
-    '/todo-lists/create/' => __DIR__ . '/views/todo-list-create.php'
+    '/todo-lists/create/' => __DIR__ . '/views/todo-list-create.php',
+    '/tasks/create/'      => __DIR__ . '/views/task-create.php'
 );
 
 if(isset($staticPaths[$path])) {
@@ -37,7 +38,14 @@ if(isset($staticPaths[$path])) {
 // Is the requested resource at a dynamic path?
 $dynamicPaths = array(
     'todo-lists' => array(
+        ''       => __DIR__ . '/views/todo-list-details.php',
+        'update' => __DIR__ . '/views/todo-list-update.php',
         'delete' => __DIR__ . '/views/todo-list-delete.php'
+    ),
+    'tasks'      => array(
+        ''       => __DIR__ . '/views/task-info.php',
+        'update' => __DIR__ . '/views/task-update.php',
+        'delete' => __DIR__ . '/views/task-delete.php'
     )
 );
 $matches = array();
@@ -46,7 +54,7 @@ if(preg_match('#^/([^/]+)/([0-9]+)(?:/([^/]+))?/#', $path, $matches)) {
     // Extract the object type, id, and action before passing them to the matching view
     $objectType = $matches[1];
     $objectId = $matches[2];
-    $objectAction = isset($matches[3]) ? $matches[3] : null;
+    $objectAction = isset($matches[3]) ? $matches[3] : '';
 
     // Check if a view exists for the given object type and action pair
     if(isset($dynamicPaths[$objectType][$objectAction])) {

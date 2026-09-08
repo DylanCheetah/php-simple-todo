@@ -61,7 +61,7 @@ function getTodoLists(): array {
 }
 
 
-function getTodoList(int $id) {
+function getTodoList(int $id): array {
     global $db;
 
     // Get the given todo list
