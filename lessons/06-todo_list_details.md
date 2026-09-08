@@ -304,10 +304,10 @@ require_once(__DIR__ . '/views/404.php');
 ```
 
 If you click one of the todo lists on the homepage, you will now see a page like this:
-*screenshot*
+![todo list details](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/14-todo_list_details.png?raw=true)
 
 And if you click the Edit button you will see a form to update the name of the todo list:
-*screenshot*
+![todo list update form](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/15-todo_list_update_form.png?raw=true)
 
 Clicking the Save or Cancel button should save or discard the changes respectively. Next we need to create `html/inc/task.php` with the following content:
 ```php
@@ -511,6 +511,9 @@ if(preg_match('#^/([^/]+)/([0-9]+)(?:/([^/]+))?/#', $path, $matches)) {
 require_once(__DIR__ . '/views/404.php');
 ?>
 ```
+
+If youe view the details page for a todo list now, you should see a form for creating tasks on the todo list:
+![task create form](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/16-task_create_form.png?raw=true)
 
 Next we need to modify `html/inc/task.php` like this:
 ```php
@@ -936,9 +939,9 @@ require_once(__DIR__ . '/views/404.php');
 ```
 
 If you visit the details page for a todo list now, you should see something like this:
-*screenshot*
+![tasks view](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/17-tasks_view.png?raw=true)
 
 Clicking the Edit button on any task should show a form for editing the task. And clicking either Save or Cancel should hide the form:
-*screenshot*
+![task update form](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/18-task_update_form.png?raw=true)
 
 Lastly, clicking the Delete button on any task should delete it.
