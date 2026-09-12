@@ -331,13 +331,13 @@ if($method === 'POST') {
 }
 
 // Send page header
-$viewName = 'Sign-Up';
+$viewName = 'Sign In';
 require_once(__DIR__ . '/../inc/page-header.php');
 ?>
 <div class="row justify-content-center">
     <div class="col-6 m-2 card bg-light">
         <div class="card-body">
-            <h1>Sign-In</h1>
+            <h1>Sign In</h1>
             <hr/>
             <?php
             // Are there any errors?
@@ -362,7 +362,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
                         type="password"/></div>
                 </div>
                 <div class="row m-1 mt-4 justify-content-end">
-                    <button class="col-2 btn btn-primary">Sign-In</button>
+                    <button class="col-2 btn btn-primary">Sign In</button>
                 </div>
             </form>
         </div>
