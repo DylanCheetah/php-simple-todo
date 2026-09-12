@@ -47,7 +47,7 @@ $task = getTask($objectId);
                 <div class="row m-1">
                     <label class="col-2" for="name">Name:</label>
                     <div class="col-10"><input class="form-control" id="name" type="text" 
-                        name="name" value="<?php echo $task['name']; ?>" 
+                        name="name" value="<?php echo htmlspecialchars($task['name']); ?>" 
                         maxlength="64" required/></div>
                 </div>
                 <div class="row m-1">

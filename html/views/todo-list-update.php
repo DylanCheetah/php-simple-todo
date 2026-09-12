@@ -55,7 +55,7 @@ $todoList = getTodoList($objectId);
             <label class="col-2" for="name">Name:</label>
             <div class="col-10">
                 <input class="form-control" id="name" type="text" name="name" 
-                    value="<?php echo $todoList['name']; ?>" 
+                    value="<?php echo htmlspecialchars($todoList['name']); ?>" 
                     maxlength="64" required/></div>
         </div>
         <div class="row m-1 mt-4 justify-content-end">
@@ -67,7 +67,7 @@ $todoList = getTodoList($objectId);
                 Save
             </button>
             <button class="col-2 m-1 btn btn-danger" type="button" 
-                hx-get="/todo-lists/<?php echo $objectId; ?>/"
+                hx-get="/todo-lists/<?php echo $objectId; ?>/info/"
                 hx-swap="outerHTML" hx-target="#todoListUpdateForm">
                 <span class="spinner-border spinner-border-sm htmx-indicator">
                     <span class="visually-hidden">Loading...</span>

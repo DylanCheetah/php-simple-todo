@@ -260,7 +260,7 @@ Notice that we limit the number of todo lists returned to 11 and use a query par
                 <div class="col card bg-white">
                     <div class="card-body row">
                         <a class="col-9 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>/">
-                            <?php echo $todoList['name']; ?></a>
+                            <?php echo htmlspecialchars($todoList['name']); ?></a>
                         <form class="col-3 row" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
                             hx-indicator="#todoListDeleteBtn<?php $todoList['id']; ?>">
                             <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
@@ -318,7 +318,7 @@ Notice that we limit the number of todo lists returned to 11 and use a query par
 </div>
 ```
 
-Each todo list will have its own URL that contains its ID. This will be used later to provide a details page for each todo list. Likewise, each todo list has its own delete URL which will allow us to delete any todo list. There will also be URLs to view the previous/next pages. Clicking the previous or next button will automatically replace the entire todo list view with a new one fetched from the server. Now modify `html/views/home.php` like this:
+Each todo list will have its own URL that contains its ID. This will be used later to provide a details page for each todo list. It's very important to remember to pass the todo list name through the `htmlspecialchars` function before displaying it in order to escape special HTML characters. Otherwise a hacker can inject arbitrary HTML into the webpage. Always remember to do this for any text data provided by the user. Each todo list also has its own delete URL which will allow us to delete the todo list. There will also be URLs to view the previous/next pages. Clicking the previous or next button will automatically replace the entire todo list view with a new one fetched from the server. Now modify `html/views/home.php` like this:
 ```php
 <?php
 // Load user functions

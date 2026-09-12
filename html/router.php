@@ -39,6 +39,7 @@ if(isset($staticPaths[$path])) {
 $dynamicPaths = array(
     'todo-lists' => array(
         ''       => __DIR__ . '/views/todo-list-details.php',
+        'info'   => __DIR__ . '/views/todo-list-info.php',
         'update' => __DIR__ . '/views/todo-list-update.php',
         'delete' => __DIR__ . '/views/todo-list-delete.php'
     ),

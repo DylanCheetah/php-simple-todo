@@ -12,7 +12,7 @@ if(!isset($task)) {
     <div class="col card bg-white">
         <div class="card-body row">
             <div class="col-7 nav-link">
-                <div><?php echo $task['name']; ?></div>
+                <div><?php echo htmlspecialchars($task['name']); ?></div>
                 <div class="text-secondary"><?php echo (new Datetime($task['due_date']))->format("m/d/Y h:m A"); ?></div>
             </div>
             <div class="col-2 m-1 row">

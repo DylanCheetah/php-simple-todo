@@ -124,7 +124,7 @@ require_once(__DIR__ . '/../inc/todo-list.php');
 $todoList = getTodoList($objectId);
 ?>
 <div class="row justify-content-center" id="todoListInfo">
-    <h1 class="col-5 m-1"><?php echo $todoList['name']; ?></h1>
+    <h1 class="col-5 m-1"><?php echo htmlspecialchars($todoList['name']); ?></h1>
     <button class="col-1 m-1 btn btn-warning" 
         hx-get="/todo-lists/<?php echo $objectId; ?>/update/" 
         hx-swap="outerHTML" hx-target="#todoListInfo">Edit</button>
@@ -190,7 +190,7 @@ $todoList = getTodoList($objectId);
             <label class="col-2" for="name">Name:</label>
             <div class="col-10">
                 <input class="form-control" id="name" type="text" name="name" 
-                    value="<?php echo $todoList['name']; ?>" 
+                    value="<?php echo htmlspecialchars($todoList['name']); ?>" 
                     maxlength="64" required/></div>
         </div>
         <div class="row m-1 mt-4 justify-content-end">
@@ -202,7 +202,7 @@ $todoList = getTodoList($objectId);
                 Save
             </button>
             <button class="col-2 m-1 btn btn-danger" type="button" 
-                hx-get="/todo-lists/<?php echo $objectId; ?>/"
+                hx-get="/todo-lists/<?php echo $objectId; ?>/info/"
                 hx-swap="outerHTML" hx-target="#todoListUpdateForm">
                 <span class="spinner-border spinner-border-sm htmx-indicator">
                     <span class="visually-hidden">Loading...</span>
@@ -279,6 +279,7 @@ if(isset($staticPaths[$path])) {
 $dynamicPaths = array(
     'todo-lists' => array(
         ''       => __DIR__ . '/views/todo-list-details.php',
+        'info'   => __DIR__ . '/views/todo-list-info.php',
         'update' => __DIR__ . '/views/todo-list-update.php',
         'delete' => __DIR__ . '/views/todo-list-delete.php'
     )
@@ -488,6 +489,7 @@ if(isset($staticPaths[$path])) {
 $dynamicPaths = array(
     'todo-lists' => array(
         ''       => __DIR__ . '/views/todo-list-details.php',
+        'info'   => __DIR__ . '/views/todo-list-info.php',
         'update' => __DIR__ . '/views/todo-list-update.php',
         'delete' => __DIR__ . '/views/todo-list-delete.php'
     )
@@ -512,7 +514,7 @@ require_once(__DIR__ . '/views/404.php');
 ?>
 ```
 
-If youe view the details page for a todo list now, you should see a form for creating tasks on the todo list:
+If you view the details page for a todo list now, you should see a form for creating tasks on the todo list:
 ![task create form](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/16-task_create_form.png?raw=true)
 
 Next we need to modify `html/inc/task.php` like this:
@@ -634,7 +636,7 @@ if(!isset($task)) {
     <div class="col card bg-white">
         <div class="card-body row">
             <div class="col-7 nav-link">
-                <div><?php echo $task['name']; ?></div>
+                <div><?php echo htmlspecialchars($task['name']); ?></div>
                 <div class="text-secondary"><?php echo (new Datetime($task['due_date']))->format("m/d/Y h:m A"); ?></div>
             </div>
             <div class="col-2 m-1 row">
@@ -712,7 +714,7 @@ $task = getTask($objectId);
                 <div class="row m-1">
                     <label class="col-2" for="name">Name:</label>
                     <div class="col-10"><input class="form-control" id="name" type="text" 
-                        name="name" value="<?php echo $task['name']; ?>" 
+                        name="name" value="<?php echo htmlspecialchars($task['name']); ?>" 
                         maxlength="64" required/></div>
                 </div>
                 <div class="row m-1">
@@ -909,6 +911,7 @@ if(isset($staticPaths[$path])) {
 $dynamicPaths = array(
     'todo-lists' => array(
         ''       => __DIR__ . '/views/todo-list-details.php',
+        'info'   => __DIR__ . '/views/todo-list-info.php',
         'update' => __DIR__ . '/views/todo-list-update.php',
         'delete' => __DIR__ . '/views/todo-list-delete.php'
     ),
