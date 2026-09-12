@@ -1,3 +1,7 @@
+# Lesson 07: Navbar
+
+Now that we have completed all the main functions of our todo list website we need to add a navigation bar to help the user navigate the website more easily. Open `html/inc/page-header.php` and modify it like this:
+```php
 <?php require_once(__DIR__ . '/../inc/user.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,3 +45,10 @@
             </div>
         </div>
         <div class="container-fluid">
+```
+
+If you view any webpage while not signed in, the navigation bar should look like this:
+*screenshot*
+
+If you aren't signed in, the navigation bar should look like this:
+*screenshot*
