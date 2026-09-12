@@ -48,7 +48,7 @@ Now that we have completed all the main functions of our todo list website we ne
 ```
 
 If you view any webpage while not signed in, the navigation bar should look like this:
-*screenshot*
+![navbar public](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/19-navbar_public.png?raw=true)
 
 If you aren't signed in, the navigation bar should look like this:
-*screenshot*
+![navbar authenticated](https://github.com/DylanCheetah/php-simple-todo/blob/main/lessons/screenshots/20-navbar_authenticated.png?raw=true)
