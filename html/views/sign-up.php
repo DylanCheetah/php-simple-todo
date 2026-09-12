@@ -44,13 +44,13 @@ if($method === 'POST') {
 }
 
 // Send page header
-$viewName = 'Sign-Up';
+$viewName = 'Sign Up';
 require_once(__DIR__ . '/../inc/page-header.php');
 ?>
 <div class="row justify-content-center">
     <div class="col-6 m-2 card bg-light">
         <div class="card-body">
-            <h1 class="card-title">Sign-Up</h1>
+            <h1 class="card-title">Sign Up</h1>
             <hr/>
             <?php
             // Are there any errors?
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
                         name="confirmPassword" type="password" minlength="8" required/></div>
                 </div>
                 <div class="row m-1 mt-4 justify-content-end">
-                    <button class="col-2 btn btn-primary">Sign-Up</button>
+                    <button class="col-2 btn btn-primary">Sign Up</button>
                 </div>
             </form>
         </div>
