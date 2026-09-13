@@ -1,4 +1,5 @@
 RewriteEngine on
+RewriteBase /php-simple-todo/
 
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
