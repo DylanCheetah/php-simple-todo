@@ -1,7 +1,7 @@
 RewriteEngine on
 RewriteBase /php-simple-todo/
 
-RewriteCond %{REQUEST_URI} ^php-simple-todo/html/
+RewriteCond %{REQUEST_URI} ^/php-simple-todo/html/
 RewriteRule ^ - [L]
 
 RewriteRule ^static/(.*) html/static/$1 [L]
