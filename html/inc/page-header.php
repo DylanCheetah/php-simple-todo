@@ -4,9 +4,9 @@
     <head>
         <title>Simple Todo - <?php echo $viewName; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-        <script src="/static/js/bootstrap.bundle.min.js"></script>
-        <script src="/static/js/htmx.min.js"></script>
+        <link rel="stylesheet" href="/php-simple-todo/static/css/bootstrap.min.css"/>
+        <script src="/php-simple-todo/static/js/bootstrap.bundle.min.js"></script>
+        <script src="/php-simple-todo/static/js/htmx.min.js"></script>
     </head>
     <body>
         <div class="navbar navbar-expand-lg bg-body-tertiary border-bottom">

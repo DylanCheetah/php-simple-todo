@@ -4,7 +4,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $path   = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 // Is the requested resource a static file?
-if(preg_match('#^/static/#', $path)) {
+if(preg_match('#^/php-simple-todo/static/#', $path)) {
     return false;
 }
 
