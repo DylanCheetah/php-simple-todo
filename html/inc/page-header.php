@@ -22,19 +22,19 @@
                         if(!isSignedIn()) {
                             ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="/accounts/sign-in/">Sign In</a>
+                                <a class="nav-link" href="/php-simple-todo/accounts/sign-in/">Sign In</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/accounts/sign-up/">Sign Up</a>
+                                <a class="nav-link" href="/php-simple-todo/accounts/sign-up/">Sign Up</a>
                             </li>
                             <?php
                         } else {
                             ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="/accounts/sign-out/">Sign Out</a>
+                                <a class="nav-link" href="/php-simple-todo/accounts/sign-out/">Sign Out</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/accounts/delete/">Delete Account</a>
+                                <a class="nav-link" href="/php-simple-todo/accounts/delete/">Delete Account</a>
                             </li>
                             <?php
                         }
