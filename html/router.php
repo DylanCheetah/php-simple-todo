@@ -1,4 +1,7 @@
 <?php
+// Set content security policy
+header("Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; form-action 'self'; frame-ancestors 'none';");
+
 // Get the request method and path
 $method = $_SERVER['REQUEST_METHOD'];
 $path   = explode('?', $_SERVER['REQUEST_URI'])[0];
