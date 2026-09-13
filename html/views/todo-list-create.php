@@ -23,7 +23,7 @@ if($method === 'POST') {
         // Create the todo list
         if(createTodoList($name)) {
             // Redirect to homepage
-            header('HX-Redirect: /');
+            header('HX-Redirect: /php-simple-todo/');
             exit();
         }
 

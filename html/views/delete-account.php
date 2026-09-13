@@ -13,7 +13,7 @@ if(!isSignedIn()) {
 if($method === 'POST') {
     // Delete the current user and redirect to the homepage
     deleteUser($_SESSION['userId']);
-    header('Location: /');
+    header('Location: /php-simple-todo/');
     exit();
 }
 

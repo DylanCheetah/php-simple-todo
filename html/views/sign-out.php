@@ -13,7 +13,7 @@ if(!isSignedIn()) {
 if($method === 'POST') {
     // Sign out the user and redirect to the homepage
     signOut();
-    header('Location: /');
+    header('Location: /php-simple-todo/');
     exit();
 }
 

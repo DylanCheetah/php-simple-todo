@@ -5,7 +5,7 @@ require_once(__DIR__ . '/../inc/user.php');
 // Is the current user signed in?
 if(!isSignedIn()) {
     // Redirect to the sign-in page
-    header('Location: /php-simple-todo/accounts/sign-in/?redirect_to=/');
+    header('Location: /php-simple-todo/accounts/sign-in/?redirect_to=/php-simple-todo/');
     exit();
 }
 

@@ -11,7 +11,7 @@
     <body>
         <div class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Simple Todo</a>
+                <a class="navbar-brand" href="/php-simple-todo/">Simple Todo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

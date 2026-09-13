@@ -49,8 +49,8 @@ function getTodoLists(): array {
     // Generate URL for previous and next page
     $prevOffset = $offset - 10;
     $nextOffset = $offset + 10;
-    $prevUrl = $hasPrevPage ? "/?start=$prevOffset" : null;
-    $nextUrl = $hasNextPage ? "/?start=$nextOffset" : null;
+    $prevUrl = $hasPrevPage ? "/php-simple-todo/?start=$prevOffset" : null;
+    $nextUrl = $hasNextPage ? "/php-simple-todo/?start=$nextOffset" : null;
 
     // Return todo list page
     return array(

@@ -34,7 +34,7 @@ if($method === 'POST') {
         // Create the user account
         if(createUser($username, $password)) {
             // Redirect to homepage
-            header('Location: /');
+            header('Location: /php-simple-todo/');
             exit();
         }
 
