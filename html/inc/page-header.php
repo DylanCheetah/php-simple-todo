@@ -44,3 +44,9 @@
             </div>
         </div>
         <div class="container-fluid">
+            <div class="row justify-center">
+                <div class="col alert alert-info"><strong>Notice:</strong> This website is provided for 
+                    demonstration purposes only. <strong>Do not use personal information on any of the 
+                    forms.</strong> We use cookies for authentication and security purposes only. IP 
+                    logging is used for security and traffic monitoring only.</strong></div>
+            </div>
