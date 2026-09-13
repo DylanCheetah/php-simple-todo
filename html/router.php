@@ -1,6 +1,7 @@
 <?php
-// Set content security policy
-header("Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; form-action 'self'; frame-ancestors 'none';");
+// Set content security policy and enable HSTS
+header("Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;");
+header('Strict-Transport-Security: max-age=63072000');
 
 // Get the request method and path
 $method = $_SERVER['REQUEST_METHOD'];
