@@ -17,7 +17,6 @@ if(preg_match('#^/php-simple-todo/static/#', $path)) {
 session_set_cookie_params(array(
     'lifetime' => 0,
     'path'     => '/',
-    'domain'   => $_SERVER['HTTP_HOST'],
     'secure'   => true,
     'httponly' => true,
     'samesite' => 'Lax'
