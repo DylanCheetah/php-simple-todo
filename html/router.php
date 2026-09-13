@@ -5,7 +5,9 @@ $path   = explode('?', $_SERVER['REQUEST_URI'])[0];
 
 // Is the requested resource a static file?
 if(preg_match('#^/php-simple-todo/static/#', $path)) {
-    return false;
+    require_once(__DIR__ . '/views/404.php');
+    exit();
+    // return false;
 }
 
 // Start a new session
