@@ -1,6 +1,6 @@
 <?php
 // Set content security policy, enable HSTS, and set content type options
-header("Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;");
+header("Content-Security-Policy: default-src 'none'; style-src 'self' 'sha256-faU7yAF8NxuMTNEwVmBz+VcYeIoBQ2EMHW3WaVxCvnk='; script-src 'self'; img-src 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;");
 header('Strict-Transport-Security: max-age=63072000');
 header('X-Content-Type-Options: nosniff');
 
