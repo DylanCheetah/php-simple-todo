@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^static/(.*) html/static/$1 [L]
+RewriteRule ^ html/router.php [QSA,L]
