@@ -27,7 +27,7 @@ if($method === 'POST') {
         // Create the task
         if(createTask($todoList, $name, $dueDate)) {
             // Redirect to the details page for the todo list
-            header("HX-Redirect: /todo-lists/$todoList/");
+            header("HX-Redirect: /php-simple-todo/todo-lists/$todoList/");
             exit();
         }
 
@@ -36,7 +36,7 @@ if($method === 'POST') {
     }
 }
 ?>
-<form hx-post="/tasks/create/" hx-swap="outerHTML"
+<form hx-post="/php-simple-todo/tasks/create/" hx-swap="outerHTML"
     hx-indicator="#taskCreateBtn">
     <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
     <input type="hidden" name="todoList" 

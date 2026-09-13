@@ -48,8 +48,8 @@ function getTasks(int $todoList): array {
     // Generate previous/next page URLs
     $prevOffset = $offset - 10;
     $nextOffset = $offset + 10;
-    $prevUrl = $hasPrevPage ? "/todo-lists/$todoList/?start=$prevOffset" : null;
-    $nextUrl = $hasNextPage ? "/todo-lists/$todoList/?start=$nextOffset" : null;
+    $prevUrl = $hasPrevPage ? "/php-simple-todo/todo-lists/$todoList/?start=$prevOffset" : null;
+    $nextUrl = $hasNextPage ? "/php-simple-todo/todo-lists/$todoList/?start=$nextOffset" : null;
 
     // Return task data
     return array(

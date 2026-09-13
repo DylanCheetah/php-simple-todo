@@ -8,6 +8,6 @@ $todoList = getTask($objectId)['todo_list'];
 
 // Delete the given task and redirect to the todo list details page
 deleteTask($objectId);
-header("HX-Redirect: /todo-lists/$todoList/");
+header("HX-Redirect: /php-simple-todo/todo-lists/$todoList/");
 exit();
 ?>

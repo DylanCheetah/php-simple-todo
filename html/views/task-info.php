@@ -17,13 +17,13 @@ if(!isset($task)) {
             </div>
             <div class="col-2 m-1 row">
                 <button class="col btn btn-warning" 
-                    hx-get="/tasks/<?php echo $task['id']; ?>/update/"
+                    hx-get="/php-simple-todo/tasks/<?php echo $task['id']; ?>/update/"
                     hx-swap="outerHTML" hx-target="#task<?php echo $task['id']; ?>">
                     Edit
                 </button>
             </div>
             <form class="col m-1 row" 
-                hx-post="/tasks/<?php echo $task['id']; ?>/delete/"
+                hx-post="/php-simple-todo/tasks/<?php echo $task['id']; ?>/delete/"
                 hx-indicator="taskDeleteBtn<?php echo $task['id']; ?>">
                 <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                 <button class="col btn btn-danger">

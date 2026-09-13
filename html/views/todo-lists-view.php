@@ -14,9 +14,9 @@
             <div class="row m-1">
                 <div class="col card bg-white">
                     <div class="card-body row">
-                        <a class="col-9 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>/">
+                        <a class="col-9 nav-link" href="/php-simple-todo/todo-lists/<?php echo $todoList['id']; ?>/">
                             <?php echo htmlspecialchars($todoList['name']); ?></a>
-                        <form class="col-3 row" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
+                        <form class="col-3 row" hx-post="/php-simple-todo/todo-lists/<?php echo $todoList['id']; ?>/delete/"
                             hx-indicator="#todoListDeleteBtn<?php $todoList['id']; ?>">
                             <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                             <button class="col btn btn-danger">

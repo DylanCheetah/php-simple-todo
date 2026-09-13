@@ -32,7 +32,7 @@ if($method === 'POST') {
     }
 }
 ?>
-<form hx-post="/todo-lists/create/" hx-swap="outerHTML" 
+<form hx-post="/php-simple-todo/todo-lists/create/" hx-swap="outerHTML" 
     hx-indicator="#todoListCreateBtn">
     <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
     <?php

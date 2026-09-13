@@ -25,7 +25,7 @@ if($method === 'POST') {
         // Update the task
         if(updateTask($objectId, $name, $dueDate)) {
             // Redirect to task info page
-            header("Location: /tasks/$objectId/");
+            header("Location: /php-simple-todo/tasks/$objectId/");
             exit();
         }
 
@@ -40,7 +40,7 @@ $task = getTask($objectId);
 <div class="row m-1" id="taskUpdateForm<?php echo $objectId; ?>">
     <div class="col card bg-light">
         <div class="card-body">
-            <form hx-post="/tasks/<?php echo $objectId; ?>/update/"
+            <form hx-post="/php-simple-todo/tasks/<?php echo $objectId; ?>/update/"
                 hx-swap="outerHTML" hx-target="#taskUpdateForm<?php echo $objectId; ?>"
                 hx-indicator="#taskSaveBtn">
                 <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
@@ -65,7 +65,7 @@ $task = getTask($objectId);
                         Save
                     </button>
                     <button class="col-2 m-1 btn btn-danger" 
-                        hx-get="/tasks/<?php echo $objectId; ?>/"
+                        hx-get="/php-simple-todo/tasks/<?php echo $objectId; ?>/"
                         hx-swap="outerHTML" 
                         hx-target="#taskUpdateForm<?php echo $objectId; ?>">
                         <span class="spinner-border spinner-border-sm htmx-indicator">

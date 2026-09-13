@@ -23,7 +23,7 @@ if($method === 'POST') {
         // Update the todo list
         if(updateTodoList($objectId, $name)) {
             // Redirect to the details page
-            header("Location: /todo-lists/$objectId/");
+            header("Location: /php-simple-todo/todo-lists/$objectId/");
             exit();
         }
 
@@ -37,7 +37,7 @@ $todoList = getTodoList($objectId);
 ?>
 <div class="row justify-content-center">
     <form class="col-6" id="todoListUpdateForm" 
-        hx-post="/todo-lists/<?php echo $objectId; ?>/update/" 
+        hx-post="/php-simple-todo/todo-lists/<?php echo $objectId; ?>/update/" 
         hx-swap="outerHTML" hx-indicator="#todoListUpdateBtn">
         <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
         <?php
@@ -67,7 +67,7 @@ $todoList = getTodoList($objectId);
                 Save
             </button>
             <button class="col-2 m-1 btn btn-danger" type="button" 
-                hx-get="/todo-lists/<?php echo $objectId; ?>/info/"
+                hx-get="/php-simple-todo/todo-lists/<?php echo $objectId; ?>/info/"
                 hx-swap="outerHTML" hx-target="#todoListUpdateForm">
                 <span class="spinner-border spinner-border-sm htmx-indicator">
                     <span class="visually-hidden">Loading...</span>
