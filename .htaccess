@@ -1,7 +1,4 @@
 RewriteEngine on
 
-RewriteCond %{DOCUMENT_ROOT}/php-simple-todo/html/static/$1 -f [OR]
-RewriteCond %{DOCUMENT_ROOT}/php-simple-todo/html/static/$1 -d
-RewriteRule ^static/(.*) html/static/$1 [L]
-
+RewriteRule ^static/(.*) html/static/$1 [END]
 RewriteRule ^ html/router.php [QSA,L]
