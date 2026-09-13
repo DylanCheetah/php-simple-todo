@@ -21,13 +21,13 @@ if($method === 'POST' && !verifyCsrfToken()) {
 
 // Is the requested resource at a static path?
 $staticPaths = array(
-    '/'                   => __DIR__ . '/views/home.php',
-    '/accounts/sign-up/'  => __DIR__ . '/views/sign-up.php',
-    '/accounts/sign-in/'  => __DIR__ . '/views/sign-in.php',
-    '/accounts/sign-out/' => __DIR__ . '/views/sign-out.php',
-    '/accounts/delete/'   => __DIR__ . '/views/delete-account.php',
-    '/todo-lists/create/' => __DIR__ . '/views/todo-list-create.php',
-    '/tasks/create/'      => __DIR__ . '/views/task-create.php'
+    '/php-simple-todo/'                   => __DIR__ . '/views/home.php',
+    '/php-simple-todo/accounts/sign-up/'  => __DIR__ . '/views/sign-up.php',
+    '/php-simple-todo/accounts/sign-in/'  => __DIR__ . '/views/sign-in.php',
+    '/php-simple-todo/accounts/sign-out/' => __DIR__ . '/views/sign-out.php',
+    '/php-simple-todo/accounts/delete/'   => __DIR__ . '/views/delete-account.php',
+    '/php-simple-todo/todo-lists/create/' => __DIR__ . '/views/todo-list-create.php',
+    '/php-simple-todo/tasks/create/'      => __DIR__ . '/views/task-create.php'
 );
 
 if(isset($staticPaths[$path])) {
@@ -51,7 +51,7 @@ $dynamicPaths = array(
 );
 $matches = array();
 
-if(preg_match('#^/([^/]+)/([0-9]+)(?:/([^/]+))?/#', $path, $matches)) {
+if(preg_match('#^/php-simple-todo/([^/]+)/([0-9]+)(?:/([^/]+))?/#', $path, $matches)) {
     // Extract the object type, id, and action before passing them to the matching view
     $objectType = $matches[1];
     $objectId = $matches[2];
