@@ -33,6 +33,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/accounts/sign-out/">Sign Out</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/accounts/delete/">Delete Account</a>
+                            </li>
                             <?php
                         }
                         ?>

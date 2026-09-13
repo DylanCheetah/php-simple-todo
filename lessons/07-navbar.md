@@ -37,6 +37,9 @@ Now that we have completed all the main functions of our todo list website we ne
                             <li class="nav-item">
                                 <a class="nav-link" href="/accounts/sign-out/">Sign Out</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/accounts/delete/">Delete Account</a>
+                            </li>
                             <?php
                         }
                         ?>
