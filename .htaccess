@@ -1,4 +1,5 @@
 RewriteEngine on
 
+RewriteBase /php-simple-todo/
 RewriteRule ^static/(.*) html/static/$1 [END]
 RewriteRule ^ html/router.php [QSA,L]
