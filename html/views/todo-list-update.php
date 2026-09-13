@@ -23,7 +23,7 @@ if($method === 'POST') {
         // Update the todo list
         if(updateTodoList($objectId, $name)) {
             // Redirect to the details page
-            header("Location: /php-simple-todo/todo-lists/$objectId/");
+            header("Location: /php-simple-todo/todo-lists/$objectId/info/");
             exit();
         }
 
