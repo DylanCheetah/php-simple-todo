@@ -8,6 +8,18 @@ if(preg_match('#^/php-simple-todo/static/#', $path)) {
     return false;
 }
 
+// Set session cookie params
+session_set_cookie_params(array(
+    'lifetime' => 0,
+    'path'     => '/',
+    'domain'   => $_SERVER['HTTP_HOST'],
+    'secure'   => true,
+    'httponly' => true,
+    'samesite' => 'Lax'
+));
+ini_set('session.use_only_cookies', 1);
+ini_set('session.use_strict_mode', 1);
+
 // Start a new session
 session_start();
 
