@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteCond %{REQUEST_URI} -f
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
 RewriteRule ^static/(.*) html/static/$1 [L]
