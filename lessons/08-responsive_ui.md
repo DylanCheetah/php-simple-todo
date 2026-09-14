@@ -1,0 +1,7 @@
+# Lesson 08: Responsive UI
+
+Now that we have finished all the main functions of our website we should also test how it looks on smaller screens such as phones and tablets. To do this you can enable responsive design mode in your web browser. Afterwards you can set different screen sizes to emulate to see how your website will look on different screens. You will likely see pages which look incorrect at first such as this:
+*screenshot*
+
+You can correct this issue by replacing your column style classes such as "col-6" with a series of responsive column style classes such as "col-lg-6 col-md-8 col-sm-12". You may need to make this adjustment on several elements of each page to make it look correct on multiple screen sizes:
+*screenshot*

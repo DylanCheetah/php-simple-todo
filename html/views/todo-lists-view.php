@@ -14,9 +14,9 @@
             <div class="row m-1">
                 <div class="col card bg-white">
                     <div class="card-body row">
-                        <a class="col-9 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>/">
+                        <a class="col-lg-9 col-md-8 col-sm-12 nav-link" href="/todo-lists/<?php echo $todoList['id']; ?>/">
                             <?php echo htmlspecialchars($todoList['name']); ?></a>
-                        <form class="col-3 row" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
+                        <form class="col-lg-3 col-md-4 col-sm-12 row" hx-post="/todo-lists/<?php echo $todoList['id']; ?>/delete/"
                             hx-indicator="#todoListDeleteBtn<?php $todoList['id']; ?>">
                             <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                             <button class="col btn btn-danger">
@@ -45,11 +45,11 @@
         // Is there a previous URL?
         if($page['prevUrl'] === null) {
             ?>
-            <button class="col-2 m-1 btn btn-secondary">Previous</button>
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-secondary">Previous</button>
             <?php
         } else {
             ?>
-            <button class="col-2 m-1 btn btn-primary" hx-get="<?php echo $page['prevUrl']; ?>" 
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-primary" hx-get="<?php echo $page['prevUrl']; ?>" 
                 hx-swap="outerHTML" hx-target="#todoListsView" 
                 hx-push-url="<?php echo $page['prevUrl']; ?>">Previous</button>
             <?php
@@ -59,11 +59,11 @@
         // Is there a next URL?
         if($page['nextUrl'] === null) {
             ?>
-            <button class="col-2 m-1 btn btn-secondary">Next</button>
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-secondary">Next</button>
             <?php
         } else {
             ?>
-            <button class="col-2 m-1 btn btn-primary" hx-get="<?php echo $page['nextUrl']; ?>"
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-primary" hx-get="<?php echo $page['nextUrl']; ?>"
                 hx-swap="outerHTML" hx-target="#todoListsView"
                 hx-push-url="<?php echo $page['nextUrl']; ?>">Next</button>
             <?php

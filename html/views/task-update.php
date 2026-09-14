@@ -45,26 +45,26 @@ $task = getTask($objectId);
                 hx-indicator="#taskSaveBtn">
                 <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                 <div class="row m-1">
-                    <label class="col-2" for="name">Name:</label>
-                    <div class="col-10"><input class="form-control" id="name" type="text" 
+                    <label class="col-lg-2 col-md-3 col-sm-12" for="name">Name:</label>
+                    <div class="col-lg-10 col-md-9 col-sm-12"><input class="form-control" id="name" type="text" 
                         name="name" value="<?php echo htmlspecialchars($task['name']); ?>" 
                         maxlength="64" required/></div>
                 </div>
                 <div class="row m-1">
-                    <label class="col-2" for="dueDate">Due Date:</label>
-                    <div class="col-10"><input class="form-control" id="dueDate" 
+                    <label class="col-lg-2 col-md-3 col-sm-12" for="dueDate">Due Date:</label>
+                    <div class="col-lg-10 col-md-9 col-sm-12"><input class="form-control" id="dueDate" 
                         type="datetime-local" name="dueDate" 
                         value="<?php echo $task['due_date']; ?>" required/></div>
                 </div>
                 <div class="row m-1 mt-4 justify-content-end">
-                    <button class="col-2 m-1 btn btn-success">
+                    <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-success">
                         <span class="spinner-border spinner-border-sm htmx-indicator"
                             id="taskSaveBtn">
                             <span class="visually-hidden">Loading...</span>
                         </span>
                         Save
                     </button>
-                    <button class="col-2 m-1 btn btn-danger" 
+                    <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-danger" 
                         hx-get="/tasks/<?php echo $objectId; ?>/"
                         hx-swap="outerHTML" 
                         hx-target="#taskUpdateForm<?php echo $objectId; ?>">
