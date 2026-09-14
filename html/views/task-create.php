@@ -53,17 +53,17 @@ if($method === 'POST') {
     }
     ?>
     <div class="row m-1">
-        <label class="col-2" for="taskName">Name:</label>
-        <div class="col-10"><input class="form-control" id="taskName" 
+        <label class="col-lg-2 col-md-3 col-sm-12" for="taskName">Name:</label>
+        <div class="col-lg-10 col-md-9 col-sm-12"><input class="form-control" id="taskName" 
             type="text" name="name" maxlength="64" required/></div>
     </div>
     <div class="row m-1">
-        <label class="col-2" for="taskDueDate">Due Date:</label>
-        <div class="col-10"><input class="form-control" id="taskDueDate"
+        <label class="col-lg-2 col-md-3 col-sm-12" for="taskDueDate">Due Date:</label>
+        <div class="col-lg-10 col-md-9 col-sm-12"><input class="form-control" id="taskDueDate"
             type="datetime-local" name="dueDate" required/></div>
     </div>
     <div class="row m-1 mt-4 justify-content-end">
-        <button class="col-2 btn btn-primary">
+        <button class="col-lg-2 col-md-3 col-sm-12 btn btn-primary">
             <span class="spinner-border spinner-border-sm htmx-indicator"
                 id="taskCreateBtn">
                 <span class="visually-hidden">Loading...</span>

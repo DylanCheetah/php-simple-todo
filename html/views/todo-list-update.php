@@ -36,7 +36,7 @@ if($method === 'POST') {
 $todoList = getTodoList($objectId);
 ?>
 <div class="row justify-content-center">
-    <form class="col-6" id="todoListUpdateForm" 
+    <form class="col-lg-6 col-md-8 col-sm-12" id="todoListUpdateForm" 
         hx-post="/php-simple-todo/todo-lists/<?php echo $objectId; ?>/update/" 
         hx-swap="outerHTML" hx-indicator="#todoListUpdateBtn">
         <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
@@ -52,21 +52,21 @@ $todoList = getTodoList($objectId);
         }
         ?>
         <div class="row m-1">
-            <label class="col-2" for="name">Name:</label>
-            <div class="col-10">
+            <label class="col-lg-2 col-md-3 col-sm-12" for="name">Name:</label>
+            <div class="col-lg-10 col-md-9 col-sm-12">
                 <input class="form-control" id="name" type="text" name="name" 
                     value="<?php echo htmlspecialchars($todoList['name']); ?>" 
                     maxlength="64" required/></div>
         </div>
         <div class="row m-1 mt-4 justify-content-end">
-            <button class="col-2 m-1 btn btn-success">
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-success">
                 <span class="spinner-border spinner-border-sm htmx-indicator"
                     id="todoListUpdateBtn">
                     <span class="visually-hidden">Loading...</span>
                 </span>
                 Save
             </button>
-            <button class="col-2 m-1 btn btn-danger" type="button" 
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-danger" type="button" 
                 hx-get="/php-simple-todo/todo-lists/<?php echo $objectId; ?>/info/"
                 hx-swap="outerHTML" hx-target="#todoListUpdateForm">
                 <span class="spinner-border spinner-border-sm htmx-indicator">

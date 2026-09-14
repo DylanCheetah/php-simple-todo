@@ -22,7 +22,7 @@ $viewName = 'Sign Out';
 require_once(__DIR__ . '/../inc/page-header.php');
 ?>
 <div class="row justify-content-center">
-    <div class="col-6 m-2 card bg-light">
+    <div class="col-lg-6 col-md-8 col-sm-12 m-2 card bg-light">
         <div class="card-body">
             <h1>Sign Out</h1>
             <hr/>
@@ -32,7 +32,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
                     <p class="col">Are you sure you want to sign out?</p>
                 </div>
                 <div class="row justify-content-end m-2 mt-4">
-                    <button class="col-2 btn btn-primary">Sign Out</button>
+                    <button class="col-lg-2 col-md-3 col-sm-12 btn btn-primary">Sign Out</button>
                 </div>
             </form>
         </div>

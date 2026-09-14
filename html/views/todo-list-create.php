@@ -49,12 +49,12 @@ if($method === 'POST') {
     }
     ?>
     <div class="row m-1">
-        <label class="col-2" for="name">Name:</label>
-        <div class="col-10"><input class="form-control" type="text" id="name" name="name" 
+        <label class="col-lg-2 col-md-2 col-sm-12" for="name">Name:</label>
+        <div class="col-lg-10 col-md-10 col-sm-12"><input class="form-control" type="text" id="name" name="name" 
             maxlength="64" required/></div>
     </div>
     <div class="row m-1 mt-4 justify-content-end">
-        <button class="col-2 btn btn-primary">
+        <button class="col-lg-2 col-md-3 col-sm-12 btn btn-primary">
             <span class="spinner-border spinner-border-sm htmx-indicator" 
                 id="todoListCreateBtn">
                 <span class="visually-hidden">Loading...</span>

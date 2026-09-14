@@ -48,7 +48,7 @@ $viewName = 'Sign In';
 require_once(__DIR__ . '/../inc/page-header.php');
 ?>
 <div class="row justify-content-center">
-    <div class="col-6 m-2 card bg-light">
+    <div class="col-lg-6 col-md-8 col-sm-12 m-2 card bg-light">
         <div class="card-body">
             <h1>Sign In</h1>
             <hr/>
@@ -66,17 +66,17 @@ require_once(__DIR__ . '/../inc/page-header.php');
             <form method="POST">
                 <input type="hidden" name="csrfToken" value="<?php echo csrfToken(); ?>"/>
                 <div class="row m-1">
-                    <label class="col-3" for="username">Username:</label>
-                    <div class="col-9"><input class="form-control" id="username" name="username" 
+                    <label class="col-lg-3 col-md-3 col-sm-12" for="username">Username:</label>
+                    <div class="col-lg-9 col-md-9 col-sm-12"><input class="form-control" id="username" name="username" 
                         type="text"/></div>
                 </div>
                 <div class="row m-1">
-                    <label class="col-3" for="password">Password:</label>
-                    <div class="col-9"><input class="form-control" id="password" name="password"
+                    <label class="col-lg-3 col-md-3 col-sm-12" for="password">Password:</label>
+                    <div class="col-lg-9 col-md-9 col-sm-12"><input class="form-control" id="password" name="password"
                         type="password"/></div>
                 </div>
                 <div class="row m-1 mt-4 justify-content-end">
-                    <button class="col-2 btn btn-primary">Sign In</button>
+                    <button class="col-lg-2 col-md-3 col-sm-12 btn btn-primary">Sign In</button>
                 </div>
             </form>
         </div>

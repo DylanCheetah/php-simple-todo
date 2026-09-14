@@ -11,11 +11,11 @@ if(!isset($task)) {
 <div class="row m-1" id="task<?php echo $task['id']; ?>">
     <div class="col card bg-white">
         <div class="card-body row">
-            <div class="col-7 nav-link">
+            <div class="col-lg-7 col-md-12 col-sm-12 nav-link">
                 <div><?php echo htmlspecialchars($task['name']); ?></div>
                 <div class="text-secondary"><?php echo (new Datetime($task['due_date']))->format("m/d/Y h:m A"); ?></div>
             </div>
-            <div class="col-2 m-1 row">
+            <div class="col-lg-2 col-md-6 col-sm-12 m-1 row">
                 <button class="col btn btn-warning" 
                     hx-get="/php-simple-todo/tasks/<?php echo $task['id']; ?>/update/"
                     hx-swap="outerHTML" hx-target="#task<?php echo $task['id']; ?>">

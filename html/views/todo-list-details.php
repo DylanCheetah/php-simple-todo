@@ -24,7 +24,7 @@ require_once(__DIR__ . '/../inc/page-header.php');
 require_once(__DIR__ . '/todo-list-info.php');
 ?>
 <div class="row justify-content-center">
-    <div class="col-6 m-1 card bg-light">
+    <div class="col-lg-6 col-md-8 col-sm-12 m-1 card bg-light">
         <div class="card-body">
             <h1 class="card-title">New Task</h1>
             <hr/>
@@ -33,7 +33,7 @@ require_once(__DIR__ . '/todo-list-info.php');
     </div>
 </div>
 <div class="row justify-content-center">
-    <div class="col-6 m-1 card bg-light">
+    <div class="col-lg-6 col-md-8 col-sm-12 m-1 card bg-light">
         <div class="card-body">
             <h1 class="card-title">Tasks</h1>
             <hr/>

@@ -23,11 +23,11 @@
         // Is there a previous URL?
         if($page['prevUrl'] === null) {
             ?>
-            <button class="col-2 m-1 btn btn-secondary">Previous</button>
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-secondary">Previous</button>
             <?php
         } else {
             ?>
-            <button class="col-2 m-1 btn btn-primary" 
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-primary" 
                 hx-get="<?php echo $page['prevUrl']; ?>" 
                 hx-swap="outerHTML" hx-target="#tasksView"
                 hx-push-url="<?php echo $page['prevUrl']; ?>">Previous</button>
@@ -37,11 +37,11 @@
         // Is there a next URL?
         if($page['nextUrl'] === null) {
             ?>
-            <button class="col-2 m-1 btn btn-secondary">Next</button>
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-secondary">Next</button>
             <?php
         } else {
             ?>
-            <button class="col-2 m-1 btn btn-primary" 
+            <button class="col-lg-2 col-md-3 col-sm-12 m-1 btn btn-primary" 
                 hx-get="<?php echo $page['nextUrl']; ?>" 
                 hx-swap="outerHTML" hx-target="#tasksView"
                 hx-push-url="<?php echo $page['nextUrl']; ?>">Next</button>
